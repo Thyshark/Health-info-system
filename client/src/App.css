@@ -1,0 +1,59 @@
+/* Program Management Specific Styles */
+.program-card {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.program-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.program-header {
+  background: linear-gradient(135deg, #1e88e5, #0d47a1);
+}
+
+.program-badge {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.program-list-item {
+  transition: background-color 0.2s;
+  padding: 1rem 1.25rem;
+}
+
+.program-list-item:hover {
+  background-color: #f8f9fa;
+}
+
+.program-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@supports not (-webkit-line-clamp: 2) {
+  .program-description {
+    max-height: 3em;
+    line-height: 1.5em;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .program-card {
+    border-radius: 0;
+  }
+}
