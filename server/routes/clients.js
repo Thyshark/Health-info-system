@@ -41,7 +41,7 @@ router.post('/', async (req, res) => {
 
 // @route   GET /api/clients
 // @desc    Get all clients
-router.get('/', async (req, res) => {
+router.get('/api/clients/', async (req, res) => {
   try {
     const clients = await Client.find().populate('programs').sort({ createdAt: -1 });
     res.json(clients);
@@ -53,7 +53,7 @@ router.get('/', async (req, res) => {
 
 // @route   PUT /api/clients/:id/enroll
 // @desc    Enroll client in programs
-router.put('/:id/enroll', async (req, res) => {
+router.put('/api/clients/:id/enroll', async (req, res) => {
   try {
     const { programIds } = req.body;
     

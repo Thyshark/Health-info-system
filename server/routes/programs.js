@@ -4,7 +4,7 @@ const Program = require('../models/program');
 
 // @route   POST /api/programs
 // @desc    Create a new program
-router.post('/', async (req, res) => {
+router.post('/api/programs', async (req, res) => {
   try {
     const { name, description } = req.body;
     
@@ -25,8 +25,8 @@ router.post('/', async (req, res) => {
 });
 
 // @route   GET /api/programs
-// @desc    Get all programs
-router.get('/', async (req, res) => {
+// @desc    Get all programs 
+router.get('/api/programs', async (req, res) => {
   try {
     const programs = await Program.find().sort({ createdAt: -1 });
     res.json(programs);

@@ -6,6 +6,7 @@ import ProgramManagement from './components/programmanagement';
 import ClientManagement from './components/clientManagement';
 import ClientProfile from './components/clientProfile';
 import ClientRegistration from './components/ClientRegistration';
+//import Client from './components/clientForm';
 import './App.css';
 
 function App() {
@@ -48,10 +49,10 @@ function App() {
         <div className="container mt-4">
           <Routes>
             {/* Default route redirects to client registration */}
-            <Route path="/" element={<Navigate to="/clients" />} />
+            <Route path="/" element={<Navigate to="/ClientRegistration" />} />
 
             {/* Client Registration */}
-            <Route path="/clients" element={
+            <Route path="/ClientRegistration" element={
               <ClientRegistration 
                 onSuccess={handleClientRegistered} 
               />
